@@ -181,11 +181,11 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('Playlist 📖', 'playlist'),
+                InlineKeyboardButton('Playlist', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("❌ Close",'cls')
+                InlineKeyboardButton("Close",'cls')
             ]        
         ]
     )
@@ -354,11 +354,11 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('Playlist 📖', 'playlist'),
+                    InlineKeyboardButton('Playlist', 'playlist'),
                 
                 ],
                 [       
-                    InlineKeyboardButton("❌ Close",'cls')
+                    InlineKeyboardButton("Close",'cls')
                 ]        
             ]
         )
@@ -399,7 +399,7 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("**⭐KINGBOT⭐**: Processing...")
+    lel = await message.reply("**🌸JANAKI🌸**: Processing...")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -436,7 +436,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🙃 Flood Wait Error 🙃  \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @kingbot_Music_Bot_Assistant to your Group and try again</b>",
+                                  "\n\nOr manually add @JANAKI_VC_PLAYER to your Group and try again</b>",
                               )
                               pass
     try:
@@ -444,12 +444,12 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Add @kingbot_Music_Bot_Assistant in chat and set as admin! manually</i>"
+            f"<i> {user.first_name} Userbot not in this chat, Add @JANAKI_VC_PLAYER in chat and set as admin! manually</i>"
         )
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("**⭐KINGBOT⭐**: Scanning song...!")
+    await lel.edit("**🌸JANAKI🌸**: Scanning song...!")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -460,7 +460,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("**⭐KINGBOT⭐**: processing...")
+    await lel.edit("**🌸JANAKI🌸**: processing...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -484,18 +484,18 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
+                    InlineKeyboardButton('Playlist', callback_data='playlist'),
                     InlineKeyboardButton('Menu ⏯ ', callback_data='menu')
                 
                 ],                     
                 [
                    InlineKeyboardButton(
-                       text="⚡ Support ⚡",
-                       url='https://t.me/KINGBOTOFFICIALCHAT')
+                       text="👻 Support 👻",
+                       url='https://t.me/FlyingKILI')
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="❌ Close",
+                        text="Close",
                         callback_data='cls')
 
                 ]                             
@@ -532,7 +532,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** song requested by {} via ⭐ KINGBOT ⭐ ".format(
+        caption="▶️ **Playing** song requested by {} via 🌸 JANAKI 🌸 ".format(
         message.from_user.mention()
         ),
     )
@@ -547,13 +547,13 @@ async def play(_, message: Message):
 )
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("**⭐KINGBOT⭐**: processing...")
+    lel = await message_.reply("**🌸JANAKI🌸**: processing...")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "kingbot_Music_Bot_Assistant"
+        user.first_name =  "JANAKI_VC_PLAYER"
     usar = user
     wew = usar.id
     try:
@@ -583,7 +583,7 @@ async def deezer(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🙃 Flood Wait Error 🙃 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @kingbot_Music_Bot_Assistant to your Group and try again</b>",
+                                  "\n\nOr manually add @JANAKI_VC_PLAYER to your Group and try again</b>",
                               )
                               pass
     try:
@@ -591,7 +591,7 @@ async def deezer(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, add @kingbot_Music_Bot_Assistant in chat and set as admin!! manually</i>"
+            f"<i> {user.first_name} Userbot not in this chat, add @JANAKI_VC_PLAYER in chat and set as admin!! manually</i>"
         )
         return                            
     requested_by = message_.from_user.first_name   
@@ -617,17 +617,17 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-                 InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
+                 InlineKeyboardButton('Playlist', callback_data='playlist'),
                  InlineKeyboardButton('Menu ⏯ ', callback_data='menu')     
              ],                     
              [
                InlineKeyboardButton(
-                   text="⚡ Support ⚡",
-                   url='https://t.me/KINGBOTOFFICIALCHAT')
+                   text="👻 Support 👻",
+                   url='https://t.me/FlyingKILI')
              ],
              [       
                  InlineKeyboardButton(
-                     text="❌ Close",
+                     text="Close",
                      callback_data='cls')
 
             ]                      
@@ -645,9 +645,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"**⭐KINGBOT⭐**: #️⃣ Queued at position {position}")
+        await res.edit_text(f"**🌸JANAKI🌸**: #️⃣ Queued at position {position}")
     else:
-        await res.edit_text("**⭐KINGBOT⭐**: ▶️ Playing.....")
+        await res.edit_text("**🌸JANAKI🌸**: ▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -676,13 +676,13 @@ async def deezer(client: Client, message_: Message):
 )
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("**⭐KINGBOT⭐**: processing...")
+    lel = await message_.reply("**🌸JANAKI🌸**: processing...")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "kingbot_Music_Bot_Assistant"
+        user.first_name =  "JANAKI_VC_PLAYER"
     usar = user
     wew = usar.id
     try:
@@ -712,7 +712,7 @@ async def jiosaavn(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🙃 Flood Wait Error 🙃 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @kingbot_Music_Bot_Assistant to your Group and try again</b>",
+                                  "\n\nOr manually add @JANAKI_VC_PLAYER to your Group and try again</b>",
                               )
                               pass
     try:
@@ -750,17 +750,17 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-               InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
+               InlineKeyboardButton('Playlist', callback_data='playlist'),
                InlineKeyboardButton('Menu ⏯ ', callback_data='menu')   
              ],                     
              [
                InlineKeyboardButton(
-                   text="⚡ Support ⚡",
-                   url='https://t.me/KINGBOTOFFICIALCHAT')
+                   text="👻 Support 👻",
+                   url='https://t.me/FlyingKILI')
              ],
              [       
                InlineKeyboardButton(
-                   text="❌ Close",
+                   text="Close",
                    callback_data='cls')
 
             ]                          
@@ -780,12 +780,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"**⭐KINGBOT⭐**: #️⃣ Queued at position {position}",
+            caption=f"**🌸JANAKI🌸**: #️⃣ Queued at position {position}",
         
         )           
            
     else:
-        await res.edit_text("**⭐KINGBOT⭐**: ▶️ Playing.....")
+        await res.edit_text("**🌸JANAKI🌸**: ▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
