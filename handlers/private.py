@@ -7,11 +7,11 @@ from helpers.filters import other_filters2
 
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAACAgQAAx0CUJU0dgACAppgyWsRKZJ0W4hbRKdVMYuxwb50wwACgxcAAtqjlSw9sWir1m6CTx8E")
+    await message.reply_sticker("CAACAgUAAxkBAAICz2Dhbix1j1cs_UzbquUUUdEXzyuMAAJJAwACUzAIVzXXrzB9F9viIAQ")
     await message.reply_text(
         f"""**Dear {message.from_user.first_name}!
 
-😁 I am JANAKI Music Player. 
+😁 I am Lisa Music Player. 
 
 🥳 I can play music in your Telegram Group's Voice Chat😉
 
@@ -43,7 +43,7 @@ Regrards [LEGEND](https://t.me/FlyingKILI)
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/Janaki_musicbot?startgroup=true"
+                        "Add To Your Group", url="https://t.me/Lisa_musicbot?startgroup=true"
                     )]
             ]
         ),
@@ -52,7 +52,7 @@ Regrards [LEGEND](https://t.me/FlyingKILI)
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**🌸JANAKI MUSIC PLAYER IS ALWAYS ACTIVE!!🌸**""",
+      await message.reply_text("""**🌸LISA MUSIC PLAYER IS ALWAYS ACTIVE!!🌸**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
